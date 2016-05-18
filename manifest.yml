@@ -1,0 +1,15 @@
+---
+declared-services:
+  text-to-speech-service:
+    label: text_to_speech
+    plan: standard
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: cf-mobile-watson-demo
+  host: cf-mobile-watson-demo
+  disk_quota: 1024M
+- services:
+  - text-to-speech-service
